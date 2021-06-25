@@ -38,7 +38,8 @@ h1, h2 {
 }
 h1 {
     font-family: var(--fontInter);
-    font-size: 3.2rem;
+    font-size: 3rem;
+    font-weight: 700;
 }
 h2 {
     font-size: 2rem;
@@ -72,7 +73,7 @@ section {
     padding: 2rem;
 }
 .section-text {
-    margin: 1.2rem;
+    margin: 1rem;
 }
 .image-bg {
     width: 100%;
@@ -105,11 +106,12 @@ section {
     section {
         width: 50%;  
         max-height: 400px;           
-        text-align: left;        
-        padding: 4.5rem;
+        text-align: left;   
+        padding: 5rem;
     }
     .section-text {
-        margin: 0;
+        margin-left: 0;
+        margin-right: 3rem;
     }
     .image-bg {
         background-image: url(../images/image-header-desktop.jpg);
@@ -125,5 +127,6 @@ section {
     }   
     .data-analysis {
         margin-top: 0;
+        margin-right: 3rem;
     }
 }
