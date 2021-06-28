@@ -1,0 +1,157 @@
+:root {
+    /* Primary */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);  
+    /* Neutral */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);  
+    /* Background gradient */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);  
+    /* Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    padding: 13em 2em;
+    padding-bottom: 7em;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, var(--Soft-violet) 50%, var(--Soft-blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+  
+h1 {
+    color: var(--Very-dark-desaturated-blue);
+}
+  
+.content {
+    text-align: center;
+    color: var(--Very-dark-grayish-blue);
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 2em 4em 2em;
+    border-radius: 20px;
+    box-shadow: 0px 30px 40px -5px rgba(0, 0, 0, 0.3);    
+}
+
+.img-box {
+    display: none;
+}
+  
+.img-woman-mobile {
+    position: absolute;
+    left: 46%;
+    transform: translate(-50%, -55%);
+}
+  
+.faq {
+    text-align: left;
+}
+  
+.content h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 0.85rem 0;
+}
+  
+.qa-pair {
+    text-align: justify;
+    text-align-last: justify;
+    padding: 0.35em 0;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+  
+.answer {
+    display: none;
+    font-size: 0.75rem;
+    color: var(--Dark-grayish-blue);
+    padding-right: 2em;
+    line-height: 1.6;
+    text-align: left;
+    text-align-last: left;
+}
+  
+.qa-pair.active .question {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+  
+.qa-pair.active .answer {
+    display: block;
+}
+  
+.qa-pair.active .arrow-down {
+    transform: rotate(180deg);
+}
+.qa-pair:hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+}
+  
+.question {
+    display: inline-block;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    color: var(--Light-grayish-blue); 
+    margin-top: 10px;
+}
+.attribution a { color: var(--Light-grayish-blue); text-decoration: none;}
+.attribution a:hover {color: var(--Soft-red);}
+
+@media (min-width: 900px) {
+    body {        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .img-woman-mobile,
+    .img-pattern-mobile {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        position: relative;
+        min-width: 920px;
+        max-width: 58rem;
+        height: 500px;
+        padding: 4.5rem 6rem;
+        background: url(../images/illustration-woman-online-desktop.svg) no-repeat -20%
+            center,
+        url(../images/bg-pattern-desktop.svg) no-repeat -37rem -19rem;
+        background-color: #fff;
+
+    }
+    .img-box {
+        display: block;
+        position: absolute;
+        left: -10%;
+        top: 39%;
+    }
+  
+    .faq {
+        flex-basis: 50%;
+        margin-left: auto;
+    }
+  
+    .faq h1 {
+        margin: 0 0 1.5rem 0;
+        text-align: left;
+    }
+  
+    .arrow-down {
+        margin-right: 1rem;
+    }    
+}
