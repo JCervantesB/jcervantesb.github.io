@@ -29,10 +29,10 @@ body {
 }
 
 .title {
-  align-self: normal;
+  align-self: flex-start;
   color: #fff;
-  margin-top: 4rem;
   text-align: center;
+  padding-top: 2rem;
 }
 .title a {
   text-decoration: none;
