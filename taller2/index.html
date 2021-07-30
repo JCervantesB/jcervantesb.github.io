@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Porcentajes y Descuentos | Curso practico de JavaScript en Platzi</title>
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+    <header class="header">
+      <svg class="header__back" viewBox="0 0 448 512" width="100" title="arrow-left">
+        <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+      </svg>
+      <h1 class="header__title">Mi Carrito</h1>
+    </header>
+    <main>
+      <div class="summary">
+        <div class="summary__count">2 productos</div>
+        
+      </div>
+  
+      <div class="card">
+        <img class="card__image" src="https://www.kindpng.com/picc/m/136-1368176_batman-mask-png-transparent-image-batman-face-with.png" alt="">
+        <div class="card__body">
+          <div class="card__title">Mascara Batman</div>
+          <div class="card__infowrapper">
+            <div class="card__info">
+              <div class="card__label">Talla</div>
+              <div class="card__description">M</div>
+            </div>
+  
+            <div class="card__info">
+              <div class="card__label">Color</div>
+              <div class="card__description">Negro</div>
+            </div>
+  
+            <div class="card__info">
+              <div class="card__label">Cantidad</div>
+              <div class="card__description">1</div>
+            </div>
+          </div>
+          <div class="card__price">$120.00</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img class="card__image" src="https://m.media-amazon.com/images/I/61eyLcI-IGL._AC_SY550_.jpg" alt="">
+        <div class="card__body">
+          <div class="card__title">Capa Batman</div>
+          <div class="card__infowrapper">
+            <div class="card__info">
+              <div class="card__label">Talla</div>
+              <div class="card__description">M</div>
+            </div>
+  
+            <div class="card__info">
+              <div class="card__label">Color</div>
+              <div class="card__description">Negro</div>
+            </div>
+  
+            <div class="card__info">
+              <div class="card__label">Cantidad</div>
+              <div class="card__description">1</div>
+            </div>
+          </div>
+          <div class="card__price">$140.00</div>
+        </div>
+      </div>
+      <section>
+        <div class="summary__total" id="summary">Total: $<span id="totalPrice">275.00</span><span id="newPrice"></span></div>
+        <form class="coupon">
+            <label for="inputCoupon">Tengo un cupón </label>
+            <input type="text" id="inputCoupon">
+            <br/>
+            <button class="btn" type="button" onclick="onClickButtonPriceDiscount()"> Agregar Cupon </button>
+            
+            <p id="priceWithCoupon"></p>
+        </form>
+    </section>
+      <button class="btn-primary">Pagar ahora</button>
+    </main>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
