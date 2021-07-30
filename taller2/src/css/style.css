@@ -36,11 +36,11 @@ body {
 }
 .header__title {
   font-family: var(--ff-display);
-  font-size: 7.5rem;
+  font-size: 4.5rem;
   font-weight: 400;
   text-transform: uppercase;
   position: relative;
-  bottom: -2rem;
+  bottom: -1rem;
   line-height: 1;
   text-align: bottom;
   color: white;
@@ -95,6 +95,7 @@ input {
   margin-bottom: 1rem;
   overflow: hidden;
 }
+
 .card__image {
   width: 8rem;
   height: 10rem;
@@ -107,8 +108,15 @@ input {
 }
 .card__infowrapper {
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
+  gap: 0.5rem;
   margin: 1rem;
+}
+@media (min-width: 768px) {
+  .card__infowrapper {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
 }
 .card__label {
   text-transform: uppercase;
@@ -118,13 +126,13 @@ input {
   font-size: 1rem;
 }
 .card__price {
-  font-weight: bold;
-  right: 1rem;
-  bottom: 0rem;
-  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold; 
   text-align: right;
   color: var(--clr-gray500);
+  padding: 1rem;
 }
+
 .btn, .btn-primary {
   border: none;
   background: var(--clr-primary);
@@ -138,6 +146,12 @@ input {
 .btn {
   font-size: 1rem;
   padding: 0.3rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .btn {
+    width: 250px;
+  }
 }
 .btn-primary {  
   margin: 1rem 0;
