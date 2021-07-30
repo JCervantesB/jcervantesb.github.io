@@ -111,6 +111,7 @@ input {
   flex-direction: column;
   gap: 0.5rem;
   margin: 1rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .card__infowrapper {
