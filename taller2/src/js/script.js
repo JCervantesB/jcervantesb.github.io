@@ -35,7 +35,7 @@ function calcularPrecioConDescuento(precio, descuento){
           resultCoupon.innerText =`Cupón aplicado`;
         break;
         default:
-          resultCoupon.innerText = "el cupón ingresado no es valido";
+          resultCoupon.innerText = `El cupón ingresado no es valido`;
       }
       const summary = document.getElementById('summary');
       const classtotalPrice = document.getElementById('totalPrice');
