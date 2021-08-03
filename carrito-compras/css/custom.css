@@ -32,6 +32,9 @@ header {
     color: white;
     font-weight: bold;
 }
+.borrar-curso:hover {
+    color: white;
+}
 
 ul {
     list-style: none;
