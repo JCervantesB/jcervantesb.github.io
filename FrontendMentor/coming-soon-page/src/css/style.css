@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root {
+    
+    /* Prymary */
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    /* Neutral */
+    --darkGrayishRed: hsl(0, 6%, 24%);
+    /* Gradients */
+    --primaryGradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --secondaryGradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* Typography */
+    --light: 300;
+    --regular: 400;
+    --semi-bold: 600;
+}
+/* Globals */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background: var(--primaryGradient);
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: var(--light);
+    width: 100vw;
+    height: 100vh;
+}
+p {
+    margin: 0;
+}
+.nav {
+    height: 8rem;
+    padding: 3rem;
+    justify-content: flex-start;
+}
+.nav__logo {
+    height: 2.2rem;
+}
+.hero {
+    justify-content: center;
+}
+
+.hero__image {
+    background-image: url('../images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25rem;
+}
+.hero__contents {
+    padding: 4rem 2rem 2rem 2rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: var(--semi-bold);
+}
+.motto {
+    color: var(--darkGrayishRed);
+    letter-spacing: 1.2rem;    
+    text-transform: uppercase;
+}
+.hero__contents-were {
+    font-weight: var(--light);
+    color: var(--desaturatedRed);
+}
+.hero__text {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: var(--regular);
+    color: var(--desaturatedRed);
+}
+.error {
+    font-size: 1.6rem;
+    color: var(--softRed);
+    padding-top: 1rem;
+}
+.icon-error {
+    width: 2rem;
+    margin-left: -5rem;
+}
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;    
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+form > input {
+    padding: 0 2rem;
+    width: 70%;
+    border-radius: 2rem;
+    border: 0.5px solid var(--desaturatedRed);
+    cursor: pointer;
+    font-weight: var(--light);
+    color: var(--desaturatedRed);
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    margin-left: -4rem;
+    border: 0;
+    width: 5.5rem;
+    padding: 1.2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius:  2rem;
+    border-top-right-radius:  2rem;
+    background: var(--secondaryGradient);
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+button:hover {
+    background: var(--desaturatedRed);
+}
+.border-red {
+    border: 0.5px solid var(--softRed);    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* Desktop */
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-size: cover;     
+        background-repeat: no-repeat;
+        background-position-y: -55rem;
+    }
+   .container {
+       margin-top: 10rem;
+       min-width: 800px;
+       max-width: 1440px;
+       height: 80vh;       
+    }
+    
+   .nav {
+       padding: 5rem;
+   }
+   .nav__logo {
+       height: 4rem;
+   }
+   .hero {
+       display: grid;
+       grid-template-columns: 50% 50%;
+       grid-auto-rows: 10rem;
+   }
+   
+   .hero__image{
+       background-image: url('../images/hero-desktop.jpg');
+       background-size: contain;
+       padding: 2rem;
+       height: 65rem;       
+       grid-column-start: 2;
+       grid-row-start: 1;
+       grid-row-end: 3;
+   }
+   .hero__contents {
+       grid-column-start: 1;
+       grid-row-start: 2;
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+       margin-top: 5rem;
+       font-size: 6rem;
+       padding-left: 5rem;
+       padding-right: 12rem;
+   }
+   .hero__text {
+       margin: 2rem 0;
+       padding: 0;
+       text-align: left;
+       line-height: 1.8;
+}
+    form > input {
+        width: 90%;
+    }
+    
+    button {                 
+        width: 8rem;
+        margin-left: -5rem;
+    }
+    .icon-error {
+        margin-left: -7rem;
+    }
+   .attribution {
+       align-self: flex-end;
+   }
+}
+
+
