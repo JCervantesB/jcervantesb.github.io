@@ -108,6 +108,7 @@ form > input {
     color: var(--desaturatedRed);
     background-color: transparent;
     outline: none;
+    height: 5rem;
 }
 
 button {
